@@ -1,0 +1,86 @@
+body{
+  height: 100vh;
+  background: #362FD9;
+  background: linear-gradient(139deg,#85CDFD 0%,#362FD9 90%);
+}
+.container{
+  position:relative;
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 17px;
+}
+.Task_list{
+  width: 100%;
+  padding: 17px 0;
+  display: flex;
+}
+.Task_list > input[type="text"]{
+  width: 90%;
+  color: #333;
+  border: none;
+  border-bottom: 3px solid #666;
+  background: none;
+  padding: 10px;
+  font-size: 22px;
+  outline: none;
+}
+.Task_list button{
+  margin: 0 12px;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 11px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Pending_tasks , .Completed_tasks{
+  margin: 5px 0;
+  padding: 20px;
+}
+h3{
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffff;
+}
+ol{
+  list-style: none;
+  counter-reset: my-counter;
+}
+ol li{
+  width: 100%;
+  padding: 20px;
+  margin: 5px 0;
+  background: #FFCEFE;
+  font-size: 25px;
+  counter-increment: my-counter;
+}
+ol.Completed_tasks li{
+  background: #DEFCF9;
+}
+ol li::before{
+  content: counter(my-counter);
+  background: #231381;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display:inline-block;
+  line-height:2rem;
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+button{
+  float:right;
+  padding:5px;
+  font-size: 28px;
+  line-height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
